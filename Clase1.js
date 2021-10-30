@@ -1,3 +1,5 @@
+// El ejercicio 1 y 2 realizando una division y usando el If para comparar resultados.
+
 let notauno = prompt( "Ingrese la nota del primer trimestre" );
 let notados = prompt( "Ingrese la nota del segundo trimestre" );
 let notatres = prompt( "Ingrese la nota del tercer trimestre" );
