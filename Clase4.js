@@ -8,6 +8,8 @@ let contday = 0;
 let contfifa = 0;
 let contnba = 0;
 let conthorizon = 0;
+let totalC = 0;
+let totalJ= 0;
 
 primera();
 
@@ -24,15 +26,20 @@ function primera(){
         var j = 3;
 
         if(confirmusuario === usuario2 && confirmpass === pass2){
-            let cof = true;
-            return cof;
+            alert("Bienvenido " + usuario2 + " Disfrute sus compras.");
+            break;
+            /*let cof = true;
+            return cof;*/
         } else {
             alert("Usuario o Contraseña incorrecta, tiene: " + (j - 1) + " intentos");
         }
     }
 }
 
-if(cof == true){
+/*LUEGO CUANDO TENGA TIEMPO ME RESUELVE ESA DUDA QUE LE PREGUNTE POR SLACK, LO ENTRGO ASI POR LA FECHA LIMITE Y ESO
+YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
+
+/*if(cof == true){*/
 
     console.log( "Tenemos 3 generos de juegos: Shooter, Survival y Deportivo." );
     let primeragenero = prompt("Ingrese el genero para ver el catalogo o ESC para salir: ");
@@ -56,10 +63,13 @@ if(cof == true){
 
                     if(eleccion == "Red Dead Redemption"){
                         contred = contred + 1;
+                        totalC = totalC + 2499;
                     } else if(eleccion == "Call of Duty: Black Ops 3"){
                         contcall = contcall + 1;
+                        totalC = totalC + 999;
                     } else if(eleccion == "CS:GO"){
                         contcsgo = contcsgo + 1;
+                        totalC = totalC + 759;
                     } else {
                         alert("Ingrese el nombre del juego correctamente. (Importante, respete mayusculas)");
                     }
@@ -78,13 +88,17 @@ if(cof == true){
 
                     if(eleccion2 == "Rust"){
                         contrust = contrust + 1;
+                        totalC = totalC + 2440;
                     } else if(eleccion2 == "The Forest"){
                         contforest = contforest + 1;
+                        totalC = totalC + 224;
                     } else if(eleccion2 == "Day Z"){
                         contday = contday + 1;
+                        totalC = totalC + 1999;
                     } else {
                         alert("Ingrese el nombre del juego correctamente. (Importante, respete mayusculas)");
                     }
+                    var eleccion2 = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
                 }
 
             } else if (primeragenero == "Deportivo"){
@@ -99,13 +113,17 @@ if(cof == true){
 
                     if(eleccion3 == "Fifa 2022"){
                         contfifa = contfifa + 1;
+                        totalC = totalC + 5499;
                     } else if(eleccion3 == "NBA2k 2022"){
                         contnba = contnba + 1;
+                        totalC = totalC + 4019;
                     } else if(eleccion3 == "Forza Horizon 4"){
                         conthorizon = conthorizon + 1;
+                        totalC = totalC + 3599;
                     } else {
                         alert("Ingrese el nombre del juego correctamente. (Importante, respete mayusculas)")
                     }
+                    var eleccion3 = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
                 }
 
             } else {
@@ -114,9 +132,13 @@ if(cof == true){
             primeragenero = prompt("Ingrese el genero para ver el catalogo o ESC para salir: ");
         }
     }
-}
+/*}*/
 
 tercera();
 
 function tercera(){
+    totalJ = contcall + contcsgo + contday + contfifa + contforest + conthorizon + contnba + contred + contrust;
+    console.log("Le informamos que la cantidad de juegos en su carrito es " + totalJ);
+    console.log("El importe a pagar es: " + totalC);
+    console.log("Gracias por su compra.");
 }
