@@ -7,11 +7,11 @@ let votonulo = 0;
 
 while( votante != "ESC" ){
 
-    if( votante == A ){
+    if( votante == "A" ){
 
         votosA = votosA + 1;
 
-    } else if ( votante == B ){
+    } else if ( votante == "B" ){
 
         votosB = votosB + 1;
 

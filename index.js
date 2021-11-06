@@ -14,32 +14,31 @@ let totalJ= 0;
 primera();
 
 function primera(){
-    var usuario = prompt("Ingrese su nombre de usuario");
-    var pass = prompt("Ingrese su Contraseña");
+    let usuario = prompt("Ingrese su nombre de usuario");
+    let pass = prompt("Ingrese su Contraseña");
 
-    var confirmusuario = usuario;
-    var confirmpass = pass;
+    let confirmusuario = usuario;
+    let confirmpass = pass;
 
     for(let i = 0; i <= 2; i++){
-        var usuario2 = prompt("Confirme su Usuario");
-        var pass2 = prompt("Confirmar su Contraseña");
-        var j = 3;
+        let usuario2 = prompt("Confirme su Usuario");
+        let pass2 = prompt("Confirmar su Contraseña");
+        let cof;
+        let j = 3;
 
         if(confirmusuario === usuario2 && confirmpass === pass2){
             alert("Bienvenido " + usuario2 + " Disfrute sus compras.");
+            cof = true;
             break;
-            /*let cof = true;
-            return cof;*/
         } else {
             alert("Usuario o Contraseña incorrecta, tiene: " + (j - 1) + " intentos");
         }
     }
+    return cof;
 }
 
-/*LUEGO CUANDO TENGA TIEMPO ME RESUELVE ESA DUDA QUE LE PREGUNTE POR SLACK, LO ENTRGO ASI POR LA FECHA LIMITE Y ESO
-YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
 
-/*if(cof == true){*/
+if(cof == true){
 
     console.log( "Tenemos 3 generos de juegos: Shooter, Survival y Deportivo." );
     let primeragenero = prompt("Ingrese el genero para ver el catalogo o ESC para salir: ");
@@ -57,7 +56,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
                 console.log("Red Dead Redemption: ARS$ 2,499");
                 console.log("Call of Duty: Black Ops 3: ARS$ 999");
                 console.log("CS:GO: ARS$ 759");
-                var eleccion = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
+                let eleccion = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
 
                 while(eleccion != "ESC"){
 
@@ -73,7 +72,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
                     } else {
                         alert("Ingrese el nombre del juego correctamente. (Importante, respete mayusculas)");
                     }
-                    var eleccion = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
+                    let eleccion = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
                 }
 
             } else if (primeragenero == "Survival"){
@@ -82,7 +81,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
                 console.log("Rust: ARS$ 2,440");
                 console.log("The Forest: ARS$ 224");
                 console.log("Day Z: ARS$ 1,999");
-                var eleccion2 = prompt("Elija uno para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
+                let eleccion2 = prompt("Elija uno para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
 
                 while(eleccion2 != "ESC"){
 
@@ -98,7 +97,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
                     } else {
                         alert("Ingrese el nombre del juego correctamente. (Importante, respete mayusculas)");
                     }
-                    var eleccion2 = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
+                    let eleccion2 = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
                 }
 
             } else if (primeragenero == "Deportivo"){
@@ -107,7 +106,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
                 console.log("Fifa 2022: ARS$ 5,499");
                 console.log("NBA2K 2022: ARS$ 4,019");
                 console.log("Forza Horizon 4: ARS$ 3,599");
-                var eleccion3 = prompt("Elija uno para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
+                let eleccion3 = prompt("Elija uno para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
 
                 while(eleccion3 != "ESC"){
 
@@ -123,7 +122,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
                     } else {
                         alert("Ingrese el nombre del juego correctamente. (Importante, respete mayusculas)")
                     }
-                    var eleccion3 = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
+                    let eleccion3 = prompt("Elija un juego para agregar al carro ingresando su nombre o ESC para vovler a la seleccion de genero.");
                 }
 
             } else {
@@ -132,7 +131,7 @@ YA DESPUES AGREGO AL CODIGO LO MARCADO, FUNCIONA TODO OK MIENTRAS*/
             primeragenero = prompt("Ingrese el genero para ver el catalogo o ESC para salir: ");
         }
     }
-/*}*/
+}
 
 tercera();
 
